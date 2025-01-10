@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 300px 30px;
+    background-image: url(/Img/bane.png);
+    background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ màn hình */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+}
+.logo img {
+    height: 100px;
+    border-radius: 10%;
+    
+}
+.restaurant-name h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.login a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    background-color: #555;
+    border-radius: 5px;
+}
+.login a:hover {
+    background-color: #888;
+}
+.menu {
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.menu a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px 10px;
+}
+.menu a:hover {
+    background-color: #ffffff; /* Darker orange for hover */
+    transition: 0.3s;
+}
+.slider-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.slider-container {
+    width: 70%; /* Giảm xuống còn 70% */
+    margin: auto; /* Căn giữa slider */
+    overflow: hidden;
+    position: relative;
+    
+}
+.slider {
+    overflow: hidden;
+    width: 100%; /* Đảm bảo slider chiếm toàn bộ chiều rộng container */
+}
+.slider .img-slider {
+    position: relative;
+    display: flex;
+}
+.slider img {
+    width: 50%; /* Đảm bảo mỗi ảnh chiếm toàn bộ chiều rộng slider */
+}
+@keyframes slider {
+    0% { transform: translateX(0); }      
+    16% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }  
+    36% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }   
+    56% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }    
+    76% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }    
+    96% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }   
+}
+
+.marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            
+        }
+        
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+            font-size: 30px;
+            padding: 20px ;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+body {
+      background-color: #80CBC4 ;
+      font-family: Arial, sans-serif;
+}
+span{
+    color: red;
+}
+h1 {
+      color: #004D40;
+      text-align: center;
+      font-size: 80px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      margin-top: 20px; /* Khoảng cách với phần tử trên */
+      margin-bottom: 20px; /* Khoảng cách với phần tử dưới */
+}
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Font chữ */
+    font-size: 25px; /* Kích thước chữ */
+    line-height:1.7; /* Khoảng cách giữa các dòng */
+    color: #333; /* Màu chữ */
+    margin: 1rem 0; /* Khoảng cách trên và dưới */
+    text-align: center;
+      
+}
+.news-ticker {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px; /* Khoảng cách với phần tử trên */
+    margin-bottom: 20px; /* Khoảng cách với phần tử dưới */
+}
+
+.news-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 10s linear infinite;
+    margin-top: 20px; /* Khoảng cách với phần tử trên */
+    margin-bottom: 20px; /* Khoảng cách với phần tử dưới */
+}
+.text-container {
+    background-color:#B2DFDB; /* Màu nền nhạt cho box */
+    padding: 20px; /* Khoảng cách giữa nội dung và viền box */
+    border: 1px solid #ccc; /* Viền nhạt cho box */
+    border-radius: 10px; /* Góc bo tròn */
+    margin: 20px auto; /* Khoảng cách trên và dưới, căn giữa box */
+    max-width: 80%; /* Giới hạn chiều rộng box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+.news-content p {
+    display: inline;
+    margin-right: 50px;
+    
+}
+@keyframes ticker {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}
+.login-container {
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 20px; /* Khoảng cách với phần tử trên */
+    margin-bottom: 20px; /* Khoảng cách với phần tử dưới */
+    padding: 10px; /* Tùy chỉnh thêm khoảng cách bên trong container nếu cần */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Hiệu ứng đ�� bóng */
+}
+
+.login-btn {
+    padding: 30px 50px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.khonggian{
+    padding: 5px;
+    margin: 5px;
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 20px; /* Khoảng cách với phần tử trên */
+    margin-bottom: 20px; /* Khoảng cách với phần tử dưới */
+    display: flex;
+}
+.khonggian img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 20px 20px 100px rgb(0, 0, 0);
+    height: 100%;
+    width: 50%;
+    margin-top: 20px; /* Khoảng cách với phần tử trên */
+    margin-bottom: 20px; /* Khoảng cách với phần tử dưới */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.khonggian img:hover {
+    transform: scale(1.1); /* Tăng kích thước hình ảnh khi hover */
+    box-shadow: 20px 20px 150px rgb(0, 0, 0); /* Tăng độ dài bóng đổ */
+}
+.monandacsac{
+    padding: 5px;
+    margin: 5px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.monandacsac img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 20px 20px 100px rgb(0, 0, 0);
+    height: 100%;
+    width: 50%;
+}
+.monandacsac img:hover{
+    transform: scale(1.1); /* Tăng kích thước hình ảnh khi hover */
+    box-shadow: 20px 20px 150px rgb(0, 0, 0); /* Tăng độ dài bóng đổ */
+}
+.dichvutantam{
+    padding: 5px;
+    margin: 5px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.dichvutantam img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 20px 20px 100px rgb(0, 0, 0);
+    height: 100%;
+    width: 50%;
+}
+.dichvutantam img:hover{
+    transform: scale(1.1); /* Tăng kích thước hình ảnh khi hover */
+    box-shadow: 20px 20px 150px rgb(0, 0, 0); /* Tăng độ dài bóng đổ */
+}
+.khuyenmai {
+    padding: 5px;
+    margin: 5px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.khuyenmai img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 20px 20px 100px rgb(0, 0, 0);
+    height: 100%;
+    width: 50%;
+}
+.khuyenmai img:hover{
+    transform: scale(1.1); /* Tăng kích thước hình ảnh khi hover */
+    box-shadow: 20px 20px 150px rgb(0, 0, 0); /* Tăng độ dài bóng đổ */
+}
+.sukien{
+    padding: 5px;
+    margin: 5px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.sukien img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 20px 20px 100px rgb(0, 0, 0);
+    height: 100%;
+    width: 50%;
+}
+.sukien img:hover{
+    transform: scale(1.1); /* Tăng kích thước hình ảnh khi hover */
+    box-shadow: 20px 20px 150px rgb(0, 0, 0); /* Tăng độ dài bóng đổ */
+}
+.docdao{
+    padding: 5px;
+    margin: 5px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.docdao img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 20px 20px 100px rgb(0, 0, 0);
+    height: 100%;
+    width: 60%;
+}
+.docdao img:hover{
+    transform: scale(1.1); /* Tăng kích thước hình ảnh khi hover */
+    box-shadow: 20px 20px 150px rgb(0, 0, 0); /* Tăng độ dài bóng đổ */
+}
+.footer {
+    background-color: #326775;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 10px 10px 10px 20px rgba(0, 0, 0, 0.464);
+}
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.footer p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+.footer a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.social-icons {
+    margin: 15px 0;
+}
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+}
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.social-icons a:hover {
+    color: #1e90ff;
+}
+.ad-banner {
+    background-color: #ffcc00; /* Màu vàng nổi bật */
+    color: #333; /* Màu chữ */
+    text-align: center;
+    padding: 1px 0;
+    font-size: 15px;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Nội dung quảng cáo */
+.ad-content a {
+    color: #d9534f; /* Màu đỏ nổi bật cho liên kết */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ad-content a:hover {
+    text-decoration: underline;
+}
+.top-bar1 {
+    background-color:#004D40; /* Màu nền tối */
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Cố định trên cùng */
+    top: 0;
+    z-index: 1000;
+    position: sticky; /* Giữ banner cố định khi cuộn */
+}
+
+/* Tên nhà hàng */
+.logo h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; /* Màu vàng nổi bật */
+}
+
+/* Chuyển đổi ngôn ngữ */
+.language-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.language-switch .lang {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.language-switch .lang:hover {
+    color: #f39c12; /* Đổi màu khi rê chuột */
+}
+
+/* Tài khoản và cài đặt */
+.user-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.user-actions .icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.user-actions .icon img:hover {
+    transform: scale(1.1); /* Phóng to khi rê chuột */
+}
+.blinking-text {
+    font-size: 20px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    color: #e74c3c; /* Màu chữ đỏ */
+    animation: blink 1s infinite; /* Thời gian nhấp nháy và lặp vô hạn */
+}
+
+/* Tạo hiệu ứng nhấp nháy */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Hiển thị đầy đủ */
+    }
+    50% {
+        opacity: 0; /* Ẩn hoàn toàn */
+    }
+}
+.colorful-text {
+    font-size: 90px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    text-align: center; /* Căn giữa */
+    background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000); /* Dải màu gradient */
+    background-size: 300%; /* Kích thước dải màu lớn hơn để tạo hiệu ứng chạy */
+    -webkit-background-clip: text; /* Áp dụng gradient chỉ lên chữ */
+    -webkit-text-fill-color: transparent; /* Làm nền chữ trong suốt */
+    animation: color-shift 5s linear infinite; /* Hiệu ứng chuyển đổi màu */
+}
+
+/* Hiệu ứng chuyển màu */
+@keyframes color-shift {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+.blinking-color-text {
+    font-size: 24px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    text-align: center; /* Căn giữa */
+    animation: blink-and-color 1s infinite; /* Hiệu ứng nhấp nháy đổi màu */
+}
+
+/* Định nghĩa hiệu ứng nhấp nháy và đổi màu */
+@keyframes blink-and-color {
+    0% {
+        color: #ff0000; /* Màu đỏ */
+        opacity: 1; /* Hiển thị đầy đủ */
+    }
+    50% {
+        color: #00ff00; /* Màu xanh lá */
+        opacity: 0; /* Ẩn chữ */
+    }
+    100% {
+        color: #0000ff; /* Màu xanh dương */
+        opacity: 1; /* Hiển thị lại */
+    }
+}
+.text-box {
+    width: 480px; /* Chiều rộng của hộp */
+    height: 200px; /* Chiều cao của hộp */
+    border: 2px solid #000; /* Viền hộp */
+    padding: 20px; /* Khoảng cách bên trong hộp */
+    margin: 20px auto; /* Căn giữa hộp (margin auto kết hợp với width) */
+    text-align: center; /* Căn giữa nội dung */
+    background-color: #f9f9f9; /* Màu nền nhẹ */
+    border-radius: 10px; /* Bo góc hộp */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    flex-direction: column; /* Xếp các phần tử theo cột */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+}
+
+.big-text {
+    font-size: 1.5rem; /* Chữ to */
+    font-weight: bold; /* Đậm */
+    margin: 10px 0; /* Khoảng cách trên và dưới */
+    color: #333; /* Màu chữ */
+}
+
+.small-text {
+    font-size: 1rem; /* Chữ nhỏ */
+    color: #666; /* Màu chữ nhạt hơn */
+    margin: 0; /* Không thêm khoảng cách */
+}
+
+</style>
+</head>
+<header class="top-bar1">
+    <!-- Tên nhà hàng -->
+    <div class="logo">
+        <h1 class="blinking-color-text">DUONG RESTAURANT </h1>
+    </div>
+    
+    <!-- Chọn ngôn ngữ -->
+    <div class="language-switch">
+        <a href="#" class="lang">🇻🇳 Tiếng Việt</a>
+        <a href="#" class="lang">🇬🇧 English</a>
+    </div>
+    
+    <!-- Tài khoản và cài đặt -->
+    <div class="user-actions">
+        <a href="#login" class="icon">
+            <img src="/Img/acuont.jpg" alt="Account" title="Tài khoản">
+        </a>
+        <a href="#login" class="icon">
+            <img src="/Img/setting.jpg" alt="Settings" title="Cài đặt">
+        </a>
+    </div>
+</header>
+<body>
+    <header class="top-bar">
+    </header>
+    <header class="ad-banner">
+        <div class="ad-content">
+            <p>🔥 <strong>Siêu khuyến mãi!</strong> Giảm giá đến 50% cho mọi sản phẩm. <a href="#" class="blinking-text">Mua ngay!</a></p>
+        </div>
+    </header>
+    <div class="news-ticker">
+        <div class="news-content">
+            <p class="bold-text">🔥1.Khuyến mãi đặc biệt cho tháng này ✨ "Chào đón mùa lễ hội, nhà hàng mang đến chương trình khuyến mãi đặc biệt! Giảm ngay 20% cho tất cả các món ăn trong thực đơn từ 15/9 Đến ngay để thưởng thức món ngon với giá hấp dẫn!"✨✨✨✨✨</p>
+            <p class="bold-text">🔥2.Mở rộng thực đơn mùa hè ✨ " Chúng tôi rất vui khi giới thiệu thực đơn mùa hè mới tại nhà hàng .Với các món ăn tươi ngon từ hải sản, trái cây mùa hè và các món salad nhẹ nhàng, bạn Sẽ có những trải nghiệm ẩm thực tươi mới, đầy sức sống."✨✨✨✨✨</p>
+            <p class="bold-text">🔥3.Giao hàng ✨ "Không thể đến nhà hàng? Đừng lo! Với dịch vụ giao hàng tận nơi , bạn có thể thưởng thức món ăn yêu thích ngay tại nhà. Món đặt ngay hôm nay và nhận ưu đãi miễn phí giao hàng trong khu vực!"✨✨✨✨✨</p>
+            <p class="bold-text">🎁4.Quà tri ân 🎁 " Chúng tôi cảm ơn sự hỗ trợ của bạn trong suốt thời gian qua! Để tri ân, nhà hàng ra mắt chương trình khách hàng thân thiết, với mỗi lần đến ăn, bạn sẽ tích lũy để nhận những ưu đãi đặc biệt. Hãy đăng ký ngay hôm nay và nhận ngay phần quà tri ân."🎁🎁🎁🎁🎁</p>
+            <p class="bold-text">🎉4.Sự kiện 🎉 "Bạn đang tìm kiếm một địa điểm tổ chức sự kiện đặc biệt? Nhà hàng cung cấp không gian riêng biệt cho các buổi tiệc sinh nhật"🎉</p>
+        </div>        
+    <nav class="menu">
+        <ul>
+            <li><a href="#login">TRANG CHỦ</a></li>
+            <li><a href="#login">MENU</a></li>
+            <li><a href="#login">ĐẶT BÀN</a></li>
+            <li><a href="#login">ODER</a></li>
+            <li><a href="#login">LIÊN HỆ</a></li>  
+            <li><a href="#login">ĐÁNH GIÁ</a></li>
+            <li><a href="#login">HỖ TRỢ</a></li>
+            <li><a href="#login">THÔNG TIN</a></li>
+        </ul>
+    </nav>
+    <div class="login-container">
+        <a href="/Trang/trangdangky.html" id=login><button class="login-btn">Đăng ký</button></a>
+        <a href="/Trang/Trangdangnhap.html" id="login1"><button class="login-btn" onclick="login()">Đăng nhập</button></a>
+    </div>
+    <div class="slider">
+        <div class="img-slider">
+            <img src="/Img/slider1.jpg" alt="Ảnh 1">
+            <img src="/Img/slider2.jpg" alt="Ảnh 2">
+            <img src="/Img/slider3.jpg" alt="Ảnh 3">
+            <img src="/Img/slider4.jpg" alt="Ảnh 4">
+            <img src="/Img/slider5.jpg" alt="Ảnh 5">
+            <img src="/Img/slider6.jpg" alt="Ảnh 6">
+            <img src="/Img/slider7.jpg" alt="Ảnh 7">
+            <img src="/Img/slider8.jpg" alt="Ảnh 8">
+            <img src="/Img/slider9.jpg" alt="Ảnh 9">
+            <img src="/Img/slider10.jpg" alt="Ảnh 10">
+        </div>
+    </div>
+    <div class="news-ticker">
+        <div class="news-content">
+            <p class="bold-text">🔥1.Khuyến mãi đặc biệt cho tháng này ✨ "Chào đón mùa lễ hội, nhà hàng mang đến chương trình khuyến mãi đặc biệt! Giảm ngay 20% cho tất cả các món ăn trong thực đơn từ 15/9 Đến ngay để thưởng thức món ngon với giá hấp dẫn!"✨✨✨✨✨</p>
+            <p class="bold-text">🔥2.Mở rộng thực đơn mùa hè ✨ " Chúng tôi rất vui khi giới thiệu thực đơn mùa hè mới tại nhà hàng .Với các món ăn tươi ngon từ hải sản, trái cây mùa hè và các món salad nhẹ nhàng, bạn Sẽ có những trải nghiệm ẩm thực tươi mới, đầy sức sống."✨✨✨✨✨</p>
+            <p class="bold-text">🔥3.Giao hàng ✨ "Không thể đến nhà hàng? Đừng lo! Với dịch vụ giao hàng tận nơi , bạn có thể thưởng thức món ăn yêu thích ngay tại nhà. Món đặt ngay hôm nay và nhận ưu đãi miễn phí giao hàng trong khu vực!"✨✨✨✨✨</p>
+            <p class="bold-text">🎁4.Quà tri ân 🎁 " Chúng tôi cảm ơn sự hỗ trợ của bạn trong suốt thời gian qua! Để tri ân, nhà hàng ra mắt chương trình khách hàng thân thiết, với mỗi lần đến ăn, bạn sẽ tích lũy để nhận những ưu đãi đặc biệt. Hãy đăng ký ngay hôm nay và nhận ngay phần quà tri ân."🎁🎁🎁🎁🎁</p>
+            <p class="bold-text">🎉4.Sự kiện 🎉 "Bạn đang tìm kiếm một địa điểm tổ chức sự kiện đặc biệt? Nhà hàng cung cấp không gian riêng biệt cho các buổi tiệc sinh nhật"🎉</p>
+        </div>        
+    <h1 class="colorful-text">DOI NET NOI BAT VE NHA HANG </h1>
+        <div class="khonggian">
+            <img src="/Img/Khonggian.jpg" alt="khonggian">
+            <div class="text-box">
+                <h1 class="big-text">Đây là chữ to</h1>
+                <p class="small-text">Đây là chữ nhỏ nằm bên dưới.</p>
+            </div>
+        </div>
+        
+<div class="text-container">
+<p>Chào mừng bạn đến với Duong Restaurant, một địa điểm lý tưởng để tận hưởng những món ăn ngon và trải nghiệm dịch vụ tận tâm. Với không gian sang trọng, ấm cúng và thực đơn phong phú, chúng tôi tự hào là điểm đến yêu thích của nhiều thực khách tại Biên Giang - Hà Đông - Hà Nội. <br>
+
+Không gian nhà hàng
+Duong Restaurant được thiết kế để mang lại cảm giác thư giãn và dễ chịu nhất cho mọi thực khách. Từ lúc bước chân vào, bạn sẽ cảm nhận được sự kết hợp hài hòa giữa kiến trúc hiện đại và nét truyền thống, tạo nên một không gian vừa sang trọng lại vừa gần gũi. Nhà hàng có nhiều khu vực phù hợp cho các dịp khác nhau, từ những bữa ăn gia đình ấm cúng cho đến các bữa tiệc sang trọng hay những cuộc gặp gỡ đối tác quan trọng. <br>
+
+Với hệ thống ánh sáng dịu nhẹ, những bàn ăn được bày trí tinh tế, và không gian mở, chúng tôi đảm bảo bạn sẽ có một buổi tối tuyệt vời trong một không gian đẳng cấp, nhưng cũng rất thoải mái và thân thiện. <br>
+
+Lịch sử hình thành và sứ mệnh
+Duong Restaurant được thành lập vào năm 1990 bởi Duong, một người đam mê ẩm thực và mong muốn mang đến cho cộng đồng những trải nghiệm ẩm thực tuyệt vời. Chúng tôi luôn tự hào về các món ăn được chế biến từ nguyên liệu tươi ngon, chọn lọc kỹ càng và một đội ngũ đầu bếp tài năng, có kinh nghiệm lâu năm trong ngành ẩm thực.   <br>
+
+Sứ mệnh của chúng tôi là mang đến cho thực khách những bữa ăn không chỉ ngon miệng mà còn là những trải nghiệm đáng nhớ, giúp mọi người thư giãn và tận hưởng cuộc sống. <br>
+
+Thực đơn đa dạng, phong phú
+Thực đơn tại Duong Restaurant là sự kết hợp hoàn hảo giữa những món ăn truyền thống và hiện đại. Mỗi món ăn được chế biến kỹ lưỡng từ nguyên liệu tươi ngon, được chọn lọc từ những nhà cung cấp uy tín. Chúng tôi cam kết không chỉ mang đến sự phong phú mà còn đảm bảo sự an toàn và chất lượng cho thực khách.
+</p><br>
+</div>
+<h1 class="colorful-text">MON AN DAC SAC</h1>
+    <div class="monandacsac">
+        <img src="/Img/monandacsac.jpg" alt="monandacsac">
+    </div>
+    <div class="text-container">
+<p>
+    <span>Bò sốt tiêu đen:</span>
+
+đây là một món ăn đặc trưng của nhà hàng, được chế biến từ Thịt bò, tiêu đen, ớt chuông, hành tây, kết hợp với các gia vị đặc biệt, tạo nên hương vị độc đáo mà không nơi nào có được. Món ăn này chắc chắn sẽ khiến bạn phải thổn thức ngay từ miếng đầu tiên. <br>
+<span>Cá hồi sốt bơ tỏi:</span>
+
+món ăn này là sự kết hợp hoàn hảo giữa Cá hồi, bơ, tỏi, chanh vàng và các nguyên liệu tươi sống, mang đến hương vị thanh nhẹ, dễ ăn, phù hợp cho những ai yêu thích các món ăn thanh đạm nhưng không kém phần hấp dẫn. <br>
+<span>Gà nướng mật ong:</span>
+
+Nếu bạn yêu thích những món ăn đậm đà, món này sẽ là lựa chọn tuyệt vời. Với Cốt dừa, kem sữa, hạnh nhân., được chế biến theo phong cách đặc biệt, món ăn này sẽ đem đến một trải nghiệm ẩm thực đậm chất [công thức món ăn]. <br>
+<span>Kem dừa handmade:</span>
+
+Đây là món tráng miệng nổi bật, được làm từ những nguyên liệu tươi ngon nhất, vừa thơm ngon lại bổ dưỡng. Món này sẽ giúp bạn kết thúc bữa ăn một cách hoàn hảo. <br>
+<span>Đặc sản mùa</span>
+Ngoài những món ăn chính, chúng tôi còn có những món đặc sản theo mùa, mang đến sự mới mẻ và đa dạng cho thực đơn. Tùy vào từng mùa trong năm, chúng tôi sẽ thay đổi và cập nhật những món ăn phù hợp với mùa vụ, giúp bạn luôn có những trải nghiệm mới lạ khi đến với nhà hàng.
+</p><br>
+</div>
+<h1 class="colorful-text">DICH VU TAN TAM</h1>
+    <div class="dichvutantam">
+        <img src="/Img/dichvutantam.jpg" alt="dichvutantam">
+    </div>
+    <div class="text-container">
+<p>Chúng tôi hiểu rằng dịch vụ là yếu tố quan trọng trong mỗi bữa ăn. Đó là lý do tại Duong Restaurant, chúng tôi luôn chú trọng đến từng chi tiết nhỏ nhất để đảm bảo mọi thực khách đều hài lòng. Đội ngũ nhân viên phục vụ tận tình, chu đáo và luôn sẵn sàng đáp ứng nhu cầu của bạn, từ việc chọn món ăn đến việc tư vấn về các kết hợp đồ uống. Hơn nữa, chúng tôi cũng cung cấp dịch vụ giao hàng tận nơi, giúp bạn thưởng thức món ăn yêu thích ngay tại nhà hoặc văn phòng.</p>
+</div>
+<h1 class="colorful-text">CHUONG TRINH KHUYEN MAI VA UU DAI</h1>
+<div class="khuyenmai">
+    <img src="/Img/khuyenmai2.jpg" alt="khuyenmai2">
+</div>
+<div class="text-container">
+<p>Chúng tôi luôn có những chương trình ưu đãi hấp dẫn dành cho khách hàng thân thiết cũng như những dịp đặc biệt. Hãy theo dõi fanpage hoặc website của chúng tôi để cập nhật thông tin về các chương trình khuyến mãi, giảm giá đặc biệt, hay sự kiện ra mắt món ăn mới.</p><br>
+</div>
+<h1 class="colorful-text">CAC SU KIEN DAC BIET</h1>
+<div class="sukien">
+    <img src="/Img/sukien.jpg" alt="sukien">
+</div>
+<div class="text-container">
+<p>[Tên Nhà Hàng] còn là địa điểm lý tưởng để tổ chức các sự kiện đặc biệt như tiệc cưới, sinh nhật, họp mặt công ty, hay hội nghị. Với không gian rộng rãi và dịch vụ chuyên nghiệp, chúng tôi cam kết sẽ giúp bạn tổ chức một sự kiện thành công và đáng nhớ. Bạn chỉ cần thư giãn và tận hưởng, còn lại chúng tôi sẽ lo liệu tất cả.</p><br>
+</div>
+<h1 class="colorful-text">LY DO NEN CHON NHA HANG CUA CHUNG TOI</h1>
+<div class="docdao">
+    <img src="/Img/docdao.jpg" alt="docdao">
+</div>
+<div class="text-container">
+<p>Ẩm thực đẳng cấp: Món ăn được chế biến từ nguyên liệu tươi ngon và công thức đặc biệt.
+Không gian sang trọng: Thiết kế hiện đại, thoải mái và dễ chịu.
+Dịch vụ chu đáo: Đội ngũ nhân viên tận tâm, phục vụ chuyên nghiệp.
+Chương trình ưu đãi: Cập nhật thường xuyên các chương trình khuyến mãi hấp dẫn.
+Dễ dàng đặt chỗ: Bạn có thể dễ dàng đặt bàn qua điện thoại, website hoặc ứng dụng của chúng tôi.
+Thông tin liên hệ
+Địa chỉ: [Địa chỉ nhà hàng]
+Số điện thoại: [Số điện thoại]
+Email: [Email liên hệ]
+Website: [Website]
+Fanpage: [Link fanpage]
+Hãy đến và trải nghiệm những giây phút tuyệt vời cùng gia đình và bạn bè tại [Tên Nhà Hàng]. Chúng tôi rất hân hạnh được phục vụ bạn!</p>
+    </div>
+</div>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Địa chỉ:</strong> 27 An Thắng - Biên Giang - Hà Đông - Hà Nội</p>
+            <p><strong>Số ĐT:</strong> <a href="tel:+84384991285">+84 964578206</a></p>
+            <p><strong>Email:</strong> <a href="mailto:daovanduong4112006a@gmail.com">daovanduong4112006a@gmail.com</a></p>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourpage" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">Facebook
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <img src="/Img/tw.jpg" alt="Twitter">Twitter
+                </a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">Instagram
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
